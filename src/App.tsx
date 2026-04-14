@@ -109,16 +109,20 @@ export default function App() {
 
       {/* SUCCESS TOAST MESSAGE */}
       {bookingSuccess && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-emerald-100 text-emerald-800 px-20 py-6 rounded-full shadow-lg flex items-center gap-3 animate-bounce">
-            <CheckCircle className="w-5 h-5" />
-            <span className="font-bold">
+        <div 
+          onClick={() => setBookingSuccess(false)}
+          className="fixed inset-0 bg-stone-900/60 backdrop-blur-sm flex items-center justify-center z-50 cursor-pointer"
+        >
+          {/* Changed rounded-full to rounded-3xl because text and images usually look better in a slightly square bubble than a perfect pill shape */}
+          <div className="bg-emerald-100 text-emerald-800 px-10 py-6 rounded-3xl shadow-lg flex flex-col md:flex-row items-center gap-6 animate-bounce text-center md:text-left">
+            <CheckCircle className="w-8 h-8 flex-shrink-0" />
+            <span className="font-bold text-lg">
               🎉 Happy Birthday Na Rose! 🎂 Wishing you happiness, relaxation, and wealth! 💖<br /> BTW, I'm the one who took this photo!
             </span>
             <img
               src={roseAndAobImg}
-              alt="Birthday picture, too bad it doesn't appear!"
-              className="w-40 h-40 object-cover rounded-full shadow-md"
+              alt="Birthday picture!"
+              className="w-40 h-40 object-cover rounded-full shadow-md border-4 border-white"
             />
           </div>
         </div> 
