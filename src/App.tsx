@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Leaf, Calendar, Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
+import roseAndAobImg from './assets/RoseAndAob.jpg';
 
 // --- TYPESCRIPT: INTERFACES ---
 // This is where TypeScript shines! We define the exact "shape" of our data.
@@ -115,12 +116,12 @@ export default function App() {
               🎉 Happy Birthday Na Rose! 🎂 Wishing you happiness, relaxation, and wealth! 💖<br /> BTW, I'm the one who took this photo!
             </span>
             <img
-              src="src\assets\RoseAndAob.jpg"
-              alt="Birthday"
+              src={roseAndAobImg}
+              alt="Birthday picture, too bad it doesn't appear!"
               className="w-40 h-40 object-cover rounded-full shadow-md"
             />
           </div>
-        </div>
+        </div> 
       )}
 
       {/* SERVICES SECTION */}
